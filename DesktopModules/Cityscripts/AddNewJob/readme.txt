@@ -1,0 +1,1 @@
+ uIPAddr,  uUserID,  uFullName,  uddlJobType,  uddlFileSubmissionPreference,  uJobID,  uContactNumber,  uJobIDName,  uProgrammeID,  uJobDescription,  uCalTodaysDate,  uTodaysdt,  ucalDueDate,  uDueDateTime,  uMediaFormat,  uTranscriberFormat,  ulMediaFileFormat,  udnnteSpecialInstructions
