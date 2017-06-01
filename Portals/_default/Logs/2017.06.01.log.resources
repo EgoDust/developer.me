@@ -1,0 +1,2 @@
+2017-06-01 10:50:27,187 [LapDog][Thread:10][ERROR] DotNetNuke.Common.Initialize - The connection to the database has failed, however, the application is already completely installed, a 500 error page will be shown to visitors
+2017-06-01 10:50:27,485 [LapDog][Thread:6][ERROR] DotNetNuke.Common.Initialize - The connection to the database has failed, however, the application is already completely installed, a 500 error page will be shown to visitors
