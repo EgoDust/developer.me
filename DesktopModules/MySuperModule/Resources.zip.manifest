@@ -1,0 +1,32 @@
+﻿<dotnetnuke type="ResourceFile" version="5.0">
+  <files>
+    <file>
+      <path />
+      <name>packages.config</name>
+    </file>
+    <file>
+      <path />
+      <name>License.lic</name>
+    </file>
+    <file>
+      <path />
+      <name>DnnPackageBuilderOverrides.props</name>
+    </file>
+    <file>
+      <path />
+      <name>Default.aspx</name>
+    </file>
+    <file>
+      <path />
+      <name>Global.asax</name>
+    </file>
+    <file>
+      <path />
+      <name>ReleaseNotes.txt</name>
+    </file>
+    <file>
+      <path />
+      <name>Web.config</name>
+    </file>
+  </files>
+</dotnetnuke>

@@ -1,0 +1,63 @@
+﻿<dotnetnuke type="Package" version="5.0">
+  <packages><package name="Cityscripts.HomePage" type="Module" version="1.0.0">
+  <friendlyName>HomePage</friendlyName>
+  <description>Transcripts247 Home Page jQuery Scroller for Cityscripts</description>
+  <iconFile />
+  <owner>
+    <name>Cityscripts</name>
+    <organization>Cityscripts</organization>
+    <url />
+    <email />
+  </owner>
+  <license>The license for this package is not currently included within the installation file, please check with the vendor for full license details.</license>
+  <releaseNotes>This package has no Release Notes.</releaseNotes>
+  <components>
+    <component type="Module">
+      <desktopModule>
+        <moduleName>Cityscripts.HomePage</moduleName>
+        <foldername>Cityscripts/HomePage</foldername>
+        <businessControllerClass />
+        <supportedFeatures />
+        <moduleDefinitions>
+          <moduleDefinition>
+            <friendlyName>Cityscripts.HomePage</friendlyName>
+            <definitionName>Cityscripts.HomePage</definitionName>
+            <defaultCacheTime>0</defaultCacheTime>
+            <moduleControls>
+              <moduleControl>
+                <controlKey />
+                <controlSrc>DesktopModules/Cityscripts/HomePage/CSHomePage.ascx</controlSrc>
+                <supportsPartialRendering>False</supportsPartialRendering>
+                <controlTitle />
+                <controlType>View</controlType>
+                <iconFile />
+                <helpUrl />
+                <supportsPopUps>False</supportsPopUps>
+                <viewOrder>0</viewOrder>
+              </moduleControl>
+            </moduleControls>
+          </moduleDefinition>
+        </moduleDefinitions>
+      </desktopModule>
+    </component>
+    <component type="File">
+      <files>
+        <basePath>DesktopModules\Cityscripts\HomePage</basePath>
+        <file>
+          <path>App_LocalResources</path>
+          <name>CSHomePage.ascx.resx</name>
+        </file>
+        <file>
+          <name>CSHomePage.ascx</name>
+        </file>
+        <file>
+          <name>CSHomePage.ascx.cs</name>
+        </file>
+        <file>
+          <name>readme.txt</name>
+        </file>
+      </files>
+    </component>
+  </components>
+</package></packages>
+</dotnetnuke>

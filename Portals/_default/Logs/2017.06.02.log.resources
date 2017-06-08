@@ -1,0 +1,85 @@
+2017-06-02 03:13:36,305 [LapDog][Thread:36][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.IO.FileNotFoundException: Could not find file 'C:\Dev\developer.me\App_Data\_imagecache\D8D698DDAE249938E359F722CE4D6EEE38F130D1.tmp'.
+File name: 'C:\Dev\developer.me\App_Data\_imagecache\D8D698DDAE249938E359F722CE4D6EEE38F130D1.tmp'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
+   at System.Web.HttpResponse.TransmitFile(String filename, Int64 offset, Int64 length)
+   at System.Web.HttpResponseWrapper.TransmitFile(String filename)
+   at DotNetNuke.Services.GeneratedImage.DiskImageStore.TryTransmitIfContains(String id, HttpResponseBase response) in C:\TeamCity\buildAgent\work\DNN_Platform_910_Public\Packaging\DNN.Platform\DNN Platform\Library\Services\GeneratedImage\DiskImageStore.cs:line 230
+   at DotNetNuke.Services.GeneratedImage.ImageHandlerInternal.HandleImageRequest(HttpContextBase context, Func`2 imageGenCallback, String uniqueIdStringSeed) in C:\TeamCity\buildAgent\work\DNN_Platform_910_Public\Packaging\DNN.Platform\DNN Platform\Library\Services\GeneratedImage\ImageHandlerInternal.cs:line 260
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2017-06-02 21:38:43,598 [LapDog][Thread:20][ERROR] DotNetNuke.UI.Modules.ModuleHost - System.Web.HttpCompileException (0x80004005): c:\Dev\developer.me\DesktopModules\Cityscripts\RushesStationTextUpdates\RushesStationTextUpdates.ascx.cs(42): error CS1009: Unrecognized escape sequence
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.UI.TemplateControl.LoadControl(VirtualPath virtualPath)
+   at DotNetNuke.UI.ControlUtilities.LoadControl[T](TemplateControl containerControl, String ControlSrc) in C:\TeamCity\buildAgent\work\DNN_Platform_910_Public\Packaging\DNN.Platform\DNN Platform\Library\UI\ControlUtilities.cs:line 109
+   at DotNetNuke.UI.Modules.WebFormsModuleControlFactory.CreateModuleControl(TemplateControl containerControl, ModuleInfo moduleConfiguration) in C:\TeamCity\buildAgent\work\DNN_Platform_910_Public\Packaging\DNN.Platform\DNN Platform\Library\UI\Modules\WebFormsModuleControlFactory.cs:line 35
+   at DotNetNuke.UI.Modules.ModuleControlFactory.LoadModuleControl(TemplateControl containerControl, ModuleInfo moduleConfiguration) in C:\TeamCity\buildAgent\work\DNN_Platform_910_Public\Packaging\DNN.Platform\DNN Platform\Library\UI\Modules\ModuleControlFactory.cs:line 114
+   at DotNetNuke.UI.Modules.ModuleHost.LoadModuleControl() in C:\TeamCity\buildAgent\work\DNN_Platform_910_Public\Packaging\DNN.Platform\DNN Platform\Library\UI\Modules\ModuleHost.cs:line 279
+2017-06-02 21:38:45,670 [LapDog][Thread:20][ERROR] DotNetNuke.Services.Exceptions.Exceptions - FriendlyMessage="Error: RushesStationTextUpdates is currently unavailable." ctrl="DotNetNuke.UI.Modules.ModuleControlBase" exc="System.Web.HttpCompileException (0x80004005): c:\Dev\developer.me\DesktopModules\Cityscripts\RushesStationTextUpdates\RushesStationTextUpdates.ascx.cs(42): error CS1009: Unrecognized escape sequence
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.UI.TemplateControl.LoadControl(VirtualPath virtualPath)
+   at DotNetNuke.UI.ControlUtilities.LoadControl[T](TemplateControl containerControl, String ControlSrc) in C:\TeamCity\buildAgent\work\DNN_Platform_910_Public\Packaging\DNN.Platform\DNN Platform\Library\UI\ControlUtilities.cs:line 109
+   at DotNetNuke.UI.Modules.WebFormsModuleControlFactory.CreateModuleControl(TemplateControl containerControl, ModuleInfo moduleConfiguration) in C:\TeamCity\buildAgent\work\DNN_Platform_910_Public\Packaging\DNN.Platform\DNN Platform\Library\UI\Modules\WebFormsModuleControlFactory.cs:line 35
+   at DotNetNuke.UI.Modules.ModuleControlFactory.LoadModuleControl(TemplateControl containerControl, ModuleInfo moduleConfiguration) in C:\TeamCity\buildAgent\work\DNN_Platform_910_Public\Packaging\DNN.Platform\DNN Platform\Library\UI\Modules\ModuleControlFactory.cs:line 114
+   at DotNetNuke.UI.Modules.ModuleHost.LoadModuleControl() in C:\TeamCity\buildAgent\work\DNN_Platform_910_Public\Packaging\DNN.Platform\DNN Platform\Library\UI\Modules\ModuleHost.cs:line 279"
+2017-06-02 22:07:15,407 [LapDog][Thread:12][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at Cityscripts.RushesStationTextUpdates.RushesStationTextUpdates.btReadDirectory_Click(Object sender, EventArgs e) in c:\Dev\developer.me\DesktopModules\Cityscripts\RushesStationTextUpdates\RushesStationTextUpdates.ascx.cs:line 57
+   at System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2017-06-02 22:07:15,408 [LapDog][Thread:10][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at Cityscripts.RushesStationTextUpdates.RushesStationTextUpdates.btReadDirectory_Click(Object sender, EventArgs e) in c:\Dev\developer.me\DesktopModules\Cityscripts\RushesStationTextUpdates\RushesStationTextUpdates.ascx.cs:line 57
+   at System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2017-06-02 22:07:15,712 [LapDog][Thread:10][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?tabid=40&error=String+was+not+recognized+as+a+valid+DateTime.&content=0
+System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at Cityscripts.RushesStationTextUpdates.RushesStationTextUpdates.btReadDirectory_Click(Object sender, EventArgs e) in c:\Dev\developer.me\DesktopModules\Cityscripts\RushesStationTextUpdates\RushesStationTextUpdates.ascx.cs:line 57
+   at System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2017-06-02 22:07:15,705 [LapDog][Thread:12][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?tabid=40&error=String+was+not+recognized+as+a+valid+DateTime.&content=0
+System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at Cityscripts.RushesStationTextUpdates.RushesStationTextUpdates.btReadDirectory_Click(Object sender, EventArgs e) in c:\Dev\developer.me\DesktopModules\Cityscripts\RushesStationTextUpdates\RushesStationTextUpdates.ascx.cs:line 57
+   at System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2017-06-02 22:08:56,515 [LapDog][Thread:14][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at Cityscripts.RushesStationTextUpdates.RushesStationTextUpdates.btReadDirectory_Click(Object sender, EventArgs e) in c:\Dev\developer.me\DesktopModules\Cityscripts\RushesStationTextUpdates\RushesStationTextUpdates.ascx.cs:line 57
+   at System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2017-06-02 22:08:56,544 [LapDog][Thread:14][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?tabid=40&error=String+was+not+recognized+as+a+valid+DateTime.&content=0
+System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at Cityscripts.RushesStationTextUpdates.RushesStationTextUpdates.btReadDirectory_Click(Object sender, EventArgs e) in c:\Dev\developer.me\DesktopModules\Cityscripts\RushesStationTextUpdates\RushesStationTextUpdates.ascx.cs:line 57
+   at System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2017-06-02 22:11:40,840 [LapDog][Thread:6][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at Cityscripts.RushesStationTextUpdates.RushesStationTextUpdates.btReadDirectory_Click(Object sender, EventArgs e) in c:\Dev\developer.me\DesktopModules\Cityscripts\RushesStationTextUpdates\RushesStationTextUpdates.ascx.cs:line 57
+   at System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2017-06-02 22:11:41,012 [LapDog][Thread:6][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?tabid=40&error=String+was+not+recognized+as+a+valid+DateTime.&content=0
+System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at Cityscripts.RushesStationTextUpdates.RushesStationTextUpdates.btReadDirectory_Click(Object sender, EventArgs e) in c:\Dev\developer.me\DesktopModules\Cityscripts\RushesStationTextUpdates\RushesStationTextUpdates.ascx.cs:line 57
+   at System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)

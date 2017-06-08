@@ -70,7 +70,7 @@ namespace Cityscripts.FinalTranscription
                 //sb.Append("SELECT DataText FROM CSTypistsFiles WHERE id=" + s + ";"); //try sb.Append(x).Append(y).Append(z)
                 sb.Append(s); //try sb.Append(x).Append(y).Append(z)
                 //sb.AppendLine();
-                FillData(s.ToString());
+                //FillData(s.ToString());
             }
 
 
@@ -80,36 +80,36 @@ namespace Cityscripts.FinalTranscription
 
         }
         
-        protected void FillData(string s)
-        {
-            // 1
-            // Open connection
-            using (SqlConnection c = new SqlConnection(ConfigurationManager.ConnectionStrings["SiteSqlServer"].ConnectionString))
-            {
-                c.Open();
-                // 2
-                // Create new DataAdapter
-                string dynSql = @"SELECT DataText FROM CSTypistsFiles WHERE id=" + s + ";";
-                using (SqlDataAdapter a = new SqlDataAdapter(dynSql, c))
-                {
-                    // 3
-                    // Use DataAdapter to fill DataTable
-                    DataTable t = new DataTable();
-                    a.Fill(t);
-                    // 4
-                    // Render data onto the screen
-                    // dataGridView1.DataSource = t; // Mine Below
-                    StringBuilder strFileResult = new StringBuilder();
-                    strFileResult.Append(t);
-                    txtFinalTranscription.Text = strFileResult.ToString() + "Winston" + t.ToString();
-                    txtFinalTranscription.DataBind();
-                    gvTranscriptions.DataSource = t;
-                    gvTranscriptions.DataBind();
+        //////protected void FillData(string s)
+        //////{
+        //////    // 1
+        //////    // Open connection
+        //////    using (SqlConnection c = new SqlConnection(ConfigurationManager.ConnectionStrings["SiteSqlServer"].ConnectionString))
+        //////    {
+        //////        c.Open();
+        //////        // 2
+        //////        // Create new DataAdapter
+        //////        string dynSql = @"SELECT DataText FROM CSTypistsFiles WHERE id=" + s + ";";
+        //////        using (SqlDataAdapter a = new SqlDataAdapter(dynSql, c))
+        //////        {
+        //////            // 3
+        //////            // Use DataAdapter to fill DataTable
+        //////            DataTable t = new DataTable();
+        //////            a.Fill(t);
+        //////            // 4
+        //////            // Render data onto the screen
+        //////            // dataGridView1.DataSource = t; // Mine Below
+        //////            StringBuilder strFileResult = new StringBuilder();
+        //////            strFileResult.Append(t);
+        //////            txtFinalTranscription.Text = strFileResult.ToString() + "Winston" + t.ToString();
+        //////            txtFinalTranscription.DataBind();
+        //////            gvTranscriptions.DataSource = t;
+        //////            gvTranscriptions.DataBind();
                   
 
-                }
-            }
-        }
+        //////        }
+        //////    }
+        //////}
 
             protected void btnUp_Click(object sender, EventArgs e)
         {

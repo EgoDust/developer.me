@@ -1,0 +1,63 @@
+﻿<dotnetnuke type="Package" version="5.0">
+  <packages><package name="Cityscripts.DynamicMessages" type="Module" version="1.0.0">
+  <friendlyName>DynamicMessages</friendlyName>
+  <description>Transcripts247 Dynamic Messages</description>
+  <iconFile />
+  <owner>
+    <name>Cityscripts</name>
+    <organization>Cityscripts</organization>
+    <url />
+    <email />
+  </owner>
+  <license>The license for this package is not currently included within the installation file, please check with the vendor for full license details.</license>
+  <releaseNotes>This package has no Release Notes.</releaseNotes>
+  <components>
+    <component type="Module">
+      <desktopModule>
+        <moduleName>Cityscripts.DynamicMessages</moduleName>
+        <foldername>Cityscripts/DynamicMessages</foldername>
+        <businessControllerClass />
+        <supportedFeatures />
+        <moduleDefinitions>
+          <moduleDefinition>
+            <friendlyName>Cityscripts.DynamicMessages</friendlyName>
+            <definitionName>Cityscripts.DynamicMessages</definitionName>
+            <defaultCacheTime>0</defaultCacheTime>
+            <moduleControls>
+              <moduleControl>
+                <controlKey />
+                <controlSrc>DesktopModules/Cityscripts/DynamicMessages/View.ascx</controlSrc>
+                <supportsPartialRendering>False</supportsPartialRendering>
+                <controlTitle />
+                <controlType>View</controlType>
+                <iconFile />
+                <helpUrl />
+                <supportsPopUps>False</supportsPopUps>
+                <viewOrder>0</viewOrder>
+              </moduleControl>
+            </moduleControls>
+          </moduleDefinition>
+        </moduleDefinitions>
+      </desktopModule>
+    </component>
+    <component type="File">
+      <files>
+        <basePath>DesktopModules\Cityscripts\DynamicMessages</basePath>
+        <file>
+          <path>App_LocalResources</path>
+          <name>View.ascx.resx</name>
+        </file>
+        <file>
+          <name>readme.txt</name>
+        </file>
+        <file>
+          <name>View.ascx</name>
+        </file>
+        <file>
+          <name>View.ascx.cs</name>
+        </file>
+      </files>
+    </component>
+  </components>
+</package></packages>
+</dotnetnuke>

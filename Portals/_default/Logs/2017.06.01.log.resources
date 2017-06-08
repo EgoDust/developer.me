@@ -1,2 +1,349 @@
 2017-06-01 10:50:27,187 [LapDog][Thread:10][ERROR] DotNetNuke.Common.Initialize - The connection to the database has failed, however, the application is already completely installed, a 500 error page will be shown to visitors
 2017-06-01 10:50:27,485 [LapDog][Thread:6][ERROR] DotNetNuke.Common.Initialize - The connection to the database has failed, however, the application is already completely installed, a 500 error page will be shown to visitors
+2017-06-01 10:52:03,595 [LapDog][Thread:19][ERROR] DotNetNuke.Data.PetaPoco.PetaPocoHelper - [3] Error executing SQL: ;Exec dbo.GetEventLogType
+Login failed for user 'sa'.
+2017-06-01 10:52:03,666 [LapDog][Thread:19][ERROR] DotNetNuke.Services.Exceptions.Exceptions - System.Data.SqlClient.SqlException (0x80131904): Login failed for user 'sa'.
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at PetaPoco.Database.OpenSharedConnection()
+   at DotNetNuke.Data.PetaPoco.PetaPocoExt.ExecuteReader(Database database, String sql, Object[] args) in C:\TeamCity\buildAgent\work\DNN_Platform_910_Public\Packaging\DNN.Platform\DNN Platform\Library\Data\PetaPoco\PetaPocoExt.cs:line 52
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteReader(String connectionString, CommandType type, Int32 timeoutSec, String sql, Object[] args) in C:\TeamCity\buildAgent\work\DNN_Platform_910_Public\Packaging\DNN.Platform\DNN Platform\Library\Data\PetaPoco\PetaPocoHelper.cs:line 174
+   at DotNetNuke.Data.SqlDataProvider.ExecuteReader(String procedureName, Object[] commandParameters) in C:\TeamCity\buildAgent\work\DNN_Platform_910_Public\Packaging\DNN.Platform\DNN Platform\Library\Data\SqlDataProvider.cs:line 373
+   at DotNetNuke.Services.Log.EventLog.DBLoggingProvider.<>c.<GetLogTypeInfo>b__25_0(CacheItemArgs c) in C:\TeamCity\buildAgent\work\DNN_Platform_910_Public\Packaging\DNN.Platform\DNN Platform\Library\Services\Log\EventLog\DBLoggingProvider.cs:line 387
+   at DotNetNuke.Common.Utilities.DataCache.GetCachedDataFromRuntimeCache(CacheItemArgs cacheItemArgs, CacheItemExpiredCallback cacheItemExpired) in C:\TeamCity\buildAgent\work\DNN_Platform_910_Public\Packaging\DNN.Platform\DNN Platform\Library\Common\Utilities\DataCache.cs:line 534
+ClientConnectionId:bba9a2d0-340b-4482-a27d-5816aca65184
+Error Number:18456,State:1,Class:14
+2017-06-01 10:52:03,830 [LapDog][Thread:19][ERROR] DotNetNuke.Data.PetaPoco.PetaPocoHelper - [3] Error executing SQL: ;Exec dbo.GetEventLogType
+Login failed for user 'sa'.
+2017-06-01 10:52:03,848 [LapDog][Thread:19][ERROR] DotNetNuke.Services.Exceptions.Exceptions - System.Data.SqlClient.SqlException (0x80131904): Login failed for user 'sa'.
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at PetaPoco.Database.OpenSharedConnection()
+   at DotNetNuke.Data.PetaPoco.PetaPocoExt.ExecuteReader(Database database, String sql, Object[] args) in C:\TeamCity\buildAgent\work\DNN_Platform_910_Public\Packaging\DNN.Platform\DNN Platform\Library\Data\PetaPoco\PetaPocoExt.cs:line 52
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteReader(String connectionString, CommandType type, Int32 timeoutSec, String sql, Object[] args) in C:\TeamCity\buildAgent\work\DNN_Platform_910_Public\Packaging\DNN.Platform\DNN Platform\Library\Data\PetaPoco\PetaPocoHelper.cs:line 174
+   at DotNetNuke.Data.SqlDataProvider.ExecuteReader(String procedureName, Object[] commandParameters) in C:\TeamCity\buildAgent\work\DNN_Platform_910_Public\Packaging\DNN.Platform\DNN Platform\Library\Data\SqlDataProvider.cs:line 373
+   at DotNetNuke.Services.Log.EventLog.DBLoggingProvider.<>c.<GetLogTypeInfo>b__25_0(CacheItemArgs c) in C:\TeamCity\buildAgent\work\DNN_Platform_910_Public\Packaging\DNN.Platform\DNN Platform\Library\Services\Log\EventLog\DBLoggingProvider.cs:line 387
+   at DotNetNuke.Common.Utilities.DataCache.GetCachedDataFromRuntimeCache(CacheItemArgs cacheItemArgs, CacheItemExpiredCallback cacheItemExpired) in C:\TeamCity\buildAgent\work\DNN_Platform_910_Public\Packaging\DNN.Platform\DNN Platform\Library\Common\Utilities\DataCache.cs:line 534
+ClientConnectionId:bba9a2d0-340b-4482-a27d-5816aca65184
+Error Number:18456,State:1,Class:14
+2017-06-01 10:52:03,872 [LapDog][Thread:19][ERROR] DotNetNuke.Data.PetaPoco.PetaPocoHelper - [3] Error executing SQL: ;Exec dbo.GetEventLogType
+Login failed for user 'sa'.
+2017-06-01 10:52:03,893 [LapDog][Thread:19][ERROR] DotNetNuke.Services.Exceptions.Exceptions - System.Data.SqlClient.SqlException (0x80131904): Login failed for user 'sa'.
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at PetaPoco.Database.OpenSharedConnection()
+   at DotNetNuke.Data.PetaPoco.PetaPocoExt.ExecuteReader(Database database, String sql, Object[] args) in C:\TeamCity\buildAgent\work\DNN_Platform_910_Public\Packaging\DNN.Platform\DNN Platform\Library\Data\PetaPoco\PetaPocoExt.cs:line 52
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteReader(String connectionString, CommandType type, Int32 timeoutSec, String sql, Object[] args) in C:\TeamCity\buildAgent\work\DNN_Platform_910_Public\Packaging\DNN.Platform\DNN Platform\Library\Data\PetaPoco\PetaPocoHelper.cs:line 174
+   at DotNetNuke.Data.SqlDataProvider.ExecuteReader(String procedureName, Object[] commandParameters) in C:\TeamCity\buildAgent\work\DNN_Platform_910_Public\Packaging\DNN.Platform\DNN Platform\Library\Data\SqlDataProvider.cs:line 373
+   at DotNetNuke.Services.Log.EventLog.DBLoggingProvider.<>c.<GetLogTypeInfo>b__25_0(CacheItemArgs c) in C:\TeamCity\buildAgent\work\DNN_Platform_910_Public\Packaging\DNN.Platform\DNN Platform\Library\Services\Log\EventLog\DBLoggingProvider.cs:line 387
+   at DotNetNuke.Common.Utilities.DataCache.GetCachedDataFromRuntimeCache(CacheItemArgs cacheItemArgs, CacheItemExpiredCallback cacheItemExpired) in C:\TeamCity\buildAgent\work\DNN_Platform_910_Public\Packaging\DNN.Platform\DNN Platform\Library\Common\Utilities\DataCache.cs:line 534
+ClientConnectionId:bba9a2d0-340b-4482-a27d-5816aca65184
+Error Number:18456,State:1,Class:14
+2017-06-01 10:52:03,916 [LapDog][Thread:19][ERROR] DotNetNuke.Data.PetaPoco.PetaPocoHelper - [3] Error executing SQL: ;Exec dbo.GetEventLogType
+Login failed for user 'sa'.
+2017-06-01 10:52:03,933 [LapDog][Thread:19][ERROR] DotNetNuke.Services.Exceptions.Exceptions - System.Data.SqlClient.SqlException (0x80131904): Login failed for user 'sa'.
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at PetaPoco.Database.OpenSharedConnection()
+   at DotNetNuke.Data.PetaPoco.PetaPocoExt.ExecuteReader(Database database, String sql, Object[] args) in C:\TeamCity\buildAgent\work\DNN_Platform_910_Public\Packaging\DNN.Platform\DNN Platform\Library\Data\PetaPoco\PetaPocoExt.cs:line 52
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteReader(String connectionString, CommandType type, Int32 timeoutSec, String sql, Object[] args) in C:\TeamCity\buildAgent\work\DNN_Platform_910_Public\Packaging\DNN.Platform\DNN Platform\Library\Data\PetaPoco\PetaPocoHelper.cs:line 174
+   at DotNetNuke.Data.SqlDataProvider.ExecuteReader(String procedureName, Object[] commandParameters) in C:\TeamCity\buildAgent\work\DNN_Platform_910_Public\Packaging\DNN.Platform\DNN Platform\Library\Data\SqlDataProvider.cs:line 373
+   at DotNetNuke.Services.Log.EventLog.DBLoggingProvider.<>c.<GetLogTypeInfo>b__25_0(CacheItemArgs c) in C:\TeamCity\buildAgent\work\DNN_Platform_910_Public\Packaging\DNN.Platform\DNN Platform\Library\Services\Log\EventLog\DBLoggingProvider.cs:line 387
+   at DotNetNuke.Common.Utilities.DataCache.GetCachedDataFromRuntimeCache(CacheItemArgs cacheItemArgs, CacheItemExpiredCallback cacheItemExpired) in C:\TeamCity\buildAgent\work\DNN_Platform_910_Public\Packaging\DNN.Platform\DNN Platform\Library\Common\Utilities\DataCache.cs:line 534
+ClientConnectionId:bba9a2d0-340b-4482-a27d-5816aca65184
+Error Number:18456,State:1,Class:14
+2017-06-01 10:52:03,956 [LapDog][Thread:19][ERROR] DotNetNuke.Data.PetaPoco.PetaPocoHelper - [3] Error executing SQL: ;Exec dbo.GetEventLogType
+Login failed for user 'sa'.
+2017-06-01 10:52:03,973 [LapDog][Thread:19][ERROR] DotNetNuke.Services.Exceptions.Exceptions - System.Data.SqlClient.SqlException (0x80131904): Login failed for user 'sa'.
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at PetaPoco.Database.OpenSharedConnection()
+   at DotNetNuke.Data.PetaPoco.PetaPocoExt.ExecuteReader(Database database, String sql, Object[] args) in C:\TeamCity\buildAgent\work\DNN_Platform_910_Public\Packaging\DNN.Platform\DNN Platform\Library\Data\PetaPoco\PetaPocoExt.cs:line 52
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteReader(String connectionString, CommandType type, Int32 timeoutSec, String sql, Object[] args) in C:\TeamCity\buildAgent\work\DNN_Platform_910_Public\Packaging\DNN.Platform\DNN Platform\Library\Data\PetaPoco\PetaPocoHelper.cs:line 174
+   at DotNetNuke.Data.SqlDataProvider.ExecuteReader(String procedureName, Object[] commandParameters) in C:\TeamCity\buildAgent\work\DNN_Platform_910_Public\Packaging\DNN.Platform\DNN Platform\Library\Data\SqlDataProvider.cs:line 373
+   at DotNetNuke.Services.Log.EventLog.DBLoggingProvider.<>c.<GetLogTypeInfo>b__25_0(CacheItemArgs c) in C:\TeamCity\buildAgent\work\DNN_Platform_910_Public\Packaging\DNN.Platform\DNN Platform\Library\Services\Log\EventLog\DBLoggingProvider.cs:line 387
+   at DotNetNuke.Common.Utilities.DataCache.GetCachedDataFromRuntimeCache(CacheItemArgs cacheItemArgs, CacheItemExpiredCallback cacheItemExpired) in C:\TeamCity\buildAgent\work\DNN_Platform_910_Public\Packaging\DNN.Platform\DNN Platform\Library\Common\Utilities\DataCache.cs:line 534
+ClientConnectionId:bba9a2d0-340b-4482-a27d-5816aca65184
+Error Number:18456,State:1,Class:14
+2017-06-01 10:52:03,993 [LapDog][Thread:19][ERROR] DotNetNuke.Data.PetaPoco.PetaPocoHelper - [3] Error executing SQL: ;Exec dbo.GetEventLogType
+Login failed for user 'sa'.
+2017-06-01 10:52:04,007 [LapDog][Thread:19][ERROR] DotNetNuke.Services.Exceptions.Exceptions - System.Data.SqlClient.SqlException (0x80131904): Login failed for user 'sa'.
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at PetaPoco.Database.OpenSharedConnection()
+   at DotNetNuke.Data.PetaPoco.PetaPocoExt.ExecuteReader(Database database, String sql, Object[] args) in C:\TeamCity\buildAgent\work\DNN_Platform_910_Public\Packaging\DNN.Platform\DNN Platform\Library\Data\PetaPoco\PetaPocoExt.cs:line 52
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteReader(String connectionString, CommandType type, Int32 timeoutSec, String sql, Object[] args) in C:\TeamCity\buildAgent\work\DNN_Platform_910_Public\Packaging\DNN.Platform\DNN Platform\Library\Data\PetaPoco\PetaPocoHelper.cs:line 174
+   at DotNetNuke.Data.SqlDataProvider.ExecuteReader(String procedureName, Object[] commandParameters) in C:\TeamCity\buildAgent\work\DNN_Platform_910_Public\Packaging\DNN.Platform\DNN Platform\Library\Data\SqlDataProvider.cs:line 373
+   at DotNetNuke.Services.Log.EventLog.DBLoggingProvider.<>c.<GetLogTypeInfo>b__25_0(CacheItemArgs c) in C:\TeamCity\buildAgent\work\DNN_Platform_910_Public\Packaging\DNN.Platform\DNN Platform\Library\Services\Log\EventLog\DBLoggingProvider.cs:line 387
+   at DotNetNuke.Common.Utilities.DataCache.GetCachedDataFromRuntimeCache(CacheItemArgs cacheItemArgs, CacheItemExpiredCallback cacheItemExpired) in C:\TeamCity\buildAgent\work\DNN_Platform_910_Public\Packaging\DNN.Platform\DNN Platform\Library\Common\Utilities\DataCache.cs:line 534
+ClientConnectionId:bba9a2d0-340b-4482-a27d-5816aca65184
+Error Number:18456,State:1,Class:14
+2017-06-01 10:52:04,036 [LapDog][Thread:19][ERROR] DotNetNuke.Data.PetaPoco.PetaPocoHelper - [3] Error executing SQL: ;Exec dbo.GetEventLogType
+Login failed for user 'sa'.
+2017-06-01 10:52:04,056 [LapDog][Thread:19][ERROR] DotNetNuke.Services.Exceptions.Exceptions - System.Data.SqlClient.SqlException (0x80131904): Login failed for user 'sa'.
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at PetaPoco.Database.OpenSharedConnection()
+   at DotNetNuke.Data.PetaPoco.PetaPocoExt.ExecuteReader(Database database, String sql, Object[] args) in C:\TeamCity\buildAgent\work\DNN_Platform_910_Public\Packaging\DNN.Platform\DNN Platform\Library\Data\PetaPoco\PetaPocoExt.cs:line 52
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteReader(String connectionString, CommandType type, Int32 timeoutSec, String sql, Object[] args) in C:\TeamCity\buildAgent\work\DNN_Platform_910_Public\Packaging\DNN.Platform\DNN Platform\Library\Data\PetaPoco\PetaPocoHelper.cs:line 174
+   at DotNetNuke.Data.SqlDataProvider.ExecuteReader(String procedureName, Object[] commandParameters) in C:\TeamCity\buildAgent\work\DNN_Platform_910_Public\Packaging\DNN.Platform\DNN Platform\Library\Data\SqlDataProvider.cs:line 373
+   at DotNetNuke.Services.Log.EventLog.DBLoggingProvider.<>c.<GetLogTypeInfo>b__25_0(CacheItemArgs c) in C:\TeamCity\buildAgent\work\DNN_Platform_910_Public\Packaging\DNN.Platform\DNN Platform\Library\Services\Log\EventLog\DBLoggingProvider.cs:line 387
+   at DotNetNuke.Common.Utilities.DataCache.GetCachedDataFromRuntimeCache(CacheItemArgs cacheItemArgs, CacheItemExpiredCallback cacheItemExpired) in C:\TeamCity\buildAgent\work\DNN_Platform_910_Public\Packaging\DNN.Platform\DNN Platform\Library\Common\Utilities\DataCache.cs:line 534
+ClientConnectionId:bba9a2d0-340b-4482-a27d-5816aca65184
+Error Number:18456,State:1,Class:14
+2017-06-01 10:52:04,077 [LapDog][Thread:19][ERROR] DotNetNuke.Data.PetaPoco.PetaPocoHelper - [3] Error executing SQL: ;Exec dbo.GetEventLogType
+Login failed for user 'sa'.
+2017-06-01 10:52:04,098 [LapDog][Thread:19][ERROR] DotNetNuke.Services.Exceptions.Exceptions - System.Data.SqlClient.SqlException (0x80131904): Login failed for user 'sa'.
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at PetaPoco.Database.OpenSharedConnection()
+   at DotNetNuke.Data.PetaPoco.PetaPocoExt.ExecuteReader(Database database, String sql, Object[] args) in C:\TeamCity\buildAgent\work\DNN_Platform_910_Public\Packaging\DNN.Platform\DNN Platform\Library\Data\PetaPoco\PetaPocoExt.cs:line 52
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteReader(String connectionString, CommandType type, Int32 timeoutSec, String sql, Object[] args) in C:\TeamCity\buildAgent\work\DNN_Platform_910_Public\Packaging\DNN.Platform\DNN Platform\Library\Data\PetaPoco\PetaPocoHelper.cs:line 174
+   at DotNetNuke.Data.SqlDataProvider.ExecuteReader(String procedureName, Object[] commandParameters) in C:\TeamCity\buildAgent\work\DNN_Platform_910_Public\Packaging\DNN.Platform\DNN Platform\Library\Data\SqlDataProvider.cs:line 373
+   at DotNetNuke.Services.Log.EventLog.DBLoggingProvider.<>c.<GetLogTypeInfo>b__25_0(CacheItemArgs c) in C:\TeamCity\buildAgent\work\DNN_Platform_910_Public\Packaging\DNN.Platform\DNN Platform\Library\Services\Log\EventLog\DBLoggingProvider.cs:line 387
+   at DotNetNuke.Common.Utilities.DataCache.GetCachedDataFromRuntimeCache(CacheItemArgs cacheItemArgs, CacheItemExpiredCallback cacheItemExpired) in C:\TeamCity\buildAgent\work\DNN_Platform_910_Public\Packaging\DNN.Platform\DNN Platform\Library\Common\Utilities\DataCache.cs:line 534
+ClientConnectionId:bba9a2d0-340b-4482-a27d-5816aca65184
+Error Number:18456,State:1,Class:14
+2017-06-01 10:52:04,121 [LapDog][Thread:19][ERROR] DotNetNuke.Data.PetaPoco.PetaPocoHelper - [3] Error executing SQL: ;Exec dbo.GetEventLogType
+Login failed for user 'sa'.
+2017-06-01 10:52:04,139 [LapDog][Thread:19][ERROR] DotNetNuke.Services.Exceptions.Exceptions - System.Data.SqlClient.SqlException (0x80131904): Login failed for user 'sa'.
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at PetaPoco.Database.OpenSharedConnection()
+   at DotNetNuke.Data.PetaPoco.PetaPocoExt.ExecuteReader(Database database, String sql, Object[] args) in C:\TeamCity\buildAgent\work\DNN_Platform_910_Public\Packaging\DNN.Platform\DNN Platform\Library\Data\PetaPoco\PetaPocoExt.cs:line 52
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteReader(String connectionString, CommandType type, Int32 timeoutSec, String sql, Object[] args) in C:\TeamCity\buildAgent\work\DNN_Platform_910_Public\Packaging\DNN.Platform\DNN Platform\Library\Data\PetaPoco\PetaPocoHelper.cs:line 174
+   at DotNetNuke.Data.SqlDataProvider.ExecuteReader(String procedureName, Object[] commandParameters) in C:\TeamCity\buildAgent\work\DNN_Platform_910_Public\Packaging\DNN.Platform\DNN Platform\Library\Data\SqlDataProvider.cs:line 373
+   at DotNetNuke.Services.Log.EventLog.DBLoggingProvider.<>c.<GetLogTypeInfo>b__25_0(CacheItemArgs c) in C:\TeamCity\buildAgent\work\DNN_Platform_910_Public\Packaging\DNN.Platform\DNN Platform\Library\Services\Log\EventLog\DBLoggingProvider.cs:line 387
+   at DotNetNuke.Common.Utilities.DataCache.GetCachedDataFromRuntimeCache(CacheItemArgs cacheItemArgs, CacheItemExpiredCallback cacheItemExpired) in C:\TeamCity\buildAgent\work\DNN_Platform_910_Public\Packaging\DNN.Platform\DNN Platform\Library\Common\Utilities\DataCache.cs:line 534
+ClientConnectionId:bba9a2d0-340b-4482-a27d-5816aca65184
+Error Number:18456,State:1,Class:14
+2017-06-01 10:52:04,160 [LapDog][Thread:19][ERROR] DotNetNuke.Data.PetaPoco.PetaPocoHelper - [3] Error executing SQL: ;Exec dbo.GetEventLogType
+Login failed for user 'sa'.
+2017-06-01 10:52:04,177 [LapDog][Thread:19][ERROR] DotNetNuke.Services.Exceptions.Exceptions - System.Data.SqlClient.SqlException (0x80131904): Login failed for user 'sa'.
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at PetaPoco.Database.OpenSharedConnection()
+   at DotNetNuke.Data.PetaPoco.PetaPocoExt.ExecuteReader(Database database, String sql, Object[] args) in C:\TeamCity\buildAgent\work\DNN_Platform_910_Public\Packaging\DNN.Platform\DNN Platform\Library\Data\PetaPoco\PetaPocoExt.cs:line 52
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteReader(String connectionString, CommandType type, Int32 timeoutSec, String sql, Object[] args) in C:\TeamCity\buildAgent\work\DNN_Platform_910_Public\Packaging\DNN.Platform\DNN Platform\Library\Data\PetaPoco\PetaPocoHelper.cs:line 174
+   at DotNetNuke.Data.SqlDataProvider.ExecuteReader(String procedureName, Object[] commandParameters) in C:\TeamCity\buildAgent\work\DNN_Platform_910_Public\Packaging\DNN.Platform\DNN Platform\Library\Data\SqlDataProvider.cs:line 373
+   at DotNetNuke.Services.Log.EventLog.DBLoggingProvider.<>c.<GetLogTypeInfo>b__25_0(CacheItemArgs c) in C:\TeamCity\buildAgent\work\DNN_Platform_910_Public\Packaging\DNN.Platform\DNN Platform\Library\Services\Log\EventLog\DBLoggingProvider.cs:line 387
+   at DotNetNuke.Common.Utilities.DataCache.GetCachedDataFromRuntimeCache(CacheItemArgs cacheItemArgs, CacheItemExpiredCallback cacheItemExpired) in C:\TeamCity\buildAgent\work\DNN_Platform_910_Public\Packaging\DNN.Platform\DNN Platform\Library\Common\Utilities\DataCache.cs:line 534
+ClientConnectionId:bba9a2d0-340b-4482-a27d-5816aca65184
+Error Number:18456,State:1,Class:14
+2017-06-01 10:52:04,192 [LapDog][Thread:19][ERROR] DotNetNuke.Data.PetaPoco.PetaPocoHelper - [3] Error executing SQL: ;Exec dbo.GetEventLogType
+Login failed for user 'sa'.
+2017-06-01 10:52:04,206 [LapDog][Thread:19][ERROR] DotNetNuke.Services.Exceptions.Exceptions - System.Data.SqlClient.SqlException (0x80131904): Login failed for user 'sa'.
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at PetaPoco.Database.OpenSharedConnection()
+   at DotNetNuke.Data.PetaPoco.PetaPocoExt.ExecuteReader(Database database, String sql, Object[] args) in C:\TeamCity\buildAgent\work\DNN_Platform_910_Public\Packaging\DNN.Platform\DNN Platform\Library\Data\PetaPoco\PetaPocoExt.cs:line 52
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteReader(String connectionString, CommandType type, Int32 timeoutSec, String sql, Object[] args) in C:\TeamCity\buildAgent\work\DNN_Platform_910_Public\Packaging\DNN.Platform\DNN Platform\Library\Data\PetaPoco\PetaPocoHelper.cs:line 174
+   at DotNetNuke.Data.SqlDataProvider.ExecuteReader(String procedureName, Object[] commandParameters) in C:\TeamCity\buildAgent\work\DNN_Platform_910_Public\Packaging\DNN.Platform\DNN Platform\Library\Data\SqlDataProvider.cs:line 373
+   at DotNetNuke.Services.Log.EventLog.DBLoggingProvider.<>c.<GetLogTypeInfo>b__25_0(CacheItemArgs c) in C:\TeamCity\buildAgent\work\DNN_Platform_910_Public\Packaging\DNN.Platform\DNN Platform\Library\Services\Log\EventLog\DBLoggingProvider.cs:line 387
+   at DotNetNuke.Common.Utilities.DataCache.GetCachedDataFromRuntimeCache(CacheItemArgs cacheItemArgs, CacheItemExpiredCallback cacheItemExpired) in C:\TeamCity\buildAgent\work\DNN_Platform_910_Public\Packaging\DNN.Platform\DNN Platform\Library\Common\Utilities\DataCache.cs:line 534
+ClientConnectionId:bba9a2d0-340b-4482-a27d-5816aca65184
+Error Number:18456,State:1,Class:14
+2017-06-01 11:08:54,679 [LapDog][Thread:29][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): The file '/Install/Install.aspx' does not exist.
+   at System.Web.UI.Util.CheckVirtualFileExists(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   at System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   at System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   at System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2017-06-01 11:08:54,840 [LapDog][Thread:33][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): The file '/Install/Install.aspx' does not exist.
+   at System.Web.UI.Util.CheckVirtualFileExists(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   at System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   at System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   at System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2017-06-01 11:08:54,865 [LapDog][Thread:26][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): The file '/Install/Install.aspx' does not exist.
+   at System.Web.UI.Util.CheckVirtualFileExists(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   at System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   at System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   at System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2017-06-01 11:08:54,899 [LapDog][Thread:26][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): The file '/Install/Install.aspx' does not exist.
+   at System.Web.UI.Util.CheckVirtualFileExists(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   at System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   at System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   at System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2017-06-01 11:08:54,930 [LapDog][Thread:26][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): The file '/Install/Install.aspx' does not exist.
+   at System.Web.UI.Util.CheckVirtualFileExists(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   at System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   at System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   at System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2017-06-01 11:08:54,977 [LapDog][Thread:26][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): The file '/Install/Install.aspx' does not exist.
+   at System.Web.UI.Util.CheckVirtualFileExists(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   at System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   at System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   at System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2017-06-01 11:08:55,013 [LapDog][Thread:26][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): The file '/Install/Install.aspx' does not exist.
+   at System.Web.UI.Util.CheckVirtualFileExists(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   at System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   at System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   at System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2017-06-01 11:08:55,059 [LapDog][Thread:26][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): The file '/Install/Install.aspx' does not exist.
+   at System.Web.UI.Util.CheckVirtualFileExists(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   at System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   at System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   at System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2017-06-01 11:08:55,090 [LapDog][Thread:26][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): The file '/Install/Install.aspx' does not exist.
+   at System.Web.UI.Util.CheckVirtualFileExists(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   at System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   at System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   at System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2017-06-01 11:08:55,136 [LapDog][Thread:26][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): The file '/Install/Install.aspx' does not exist.
+   at System.Web.UI.Util.CheckVirtualFileExists(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   at System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   at System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   at System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2017-06-01 11:13:23,331 [LapDog][Thread:25][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Dnn.Module.ModuleCreator.ViewSource.OnPackageClick(Object sender, EventArgs e) in C:\TeamCity\buildAgent\work\DNN_Platform_910_Public\Packaging\DNN.Platform\DNN Platform\Admin Modules\Dnn.Modules.ModuleCreator\viewsource.ascx.cs:line 521
+   at System.Web.UI.WebControls.LinkButton.OnClick(EventArgs e)
+   at System.Web.UI.WebControls.LinkButton.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2017-06-01 11:13:23,419 [LapDog][Thread:25][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?tabid=20&error=Object+reference+not+set+to+an+instance+of+an+object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Dnn.Module.ModuleCreator.ViewSource.OnPackageClick(Object sender, EventArgs e) in C:\TeamCity\buildAgent\work\DNN_Platform_910_Public\Packaging\DNN.Platform\DNN Platform\Admin Modules\Dnn.Modules.ModuleCreator\viewsource.ascx.cs:line 521
+   at System.Web.UI.WebControls.LinkButton.OnClick(EventArgs e)
+   at System.Web.UI.WebControls.LinkButton.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2017-06-01 11:20:16,559 [LapDog][Thread:15][ERROR] DotNetNuke.Services.Exceptions.Exceptions - System.Exception: Error on 'C:\Dev\developer.me\DesktopModules\Cityscripts\FinalTranscription\Final Transcription.dnn': See InnerException for details. ---> System.ComponentModel.Win32Exception: The process cannot access the file because it is being used by another process
+   --- End of inner exception stack trace ---
+   at SchwabenCode.QuickIO.Internal.InternalQuickIOCommon.NativeExceptionMapping(String path, Int32 errorCode)
+   at SchwabenCode.QuickIO.QuickIOFile.OpenFileStream(QuickIOPathInfo pathInfo, FileAccess fileAccess, FileMode fileOption, FileShare shareMode, Int32 buffer)
+   at DotNetNuke.Common.Utilities.FileSystemUtils.AddToZip(ZipOutputStream& ZipFile, String filePath, String fileName, String folder) in C:\TeamCity\buildAgent\work\DNN_Platform_910_Public\Packaging\DNN.Platform\DNN Platform\Library\Common\Utilities\FileSystemUtils.cs:line 465
+   at DotNetNuke.Services.Installer.Writers.PackageWriterBase.AddFilesToZip(ZipOutputStream stream, IDictionary`2 files, String basePath) in C:\TeamCity\buildAgent\work\DNN_Platform_910_Public\Packaging\DNN.Platform\DNN Platform\Library\Services\Installer\Writers\PackageWriterBase.cs:line 315
+   at DotNetNuke.Services.Installer.Writers.PackageWriterBase.CreateZipFile(String zipFileName) in C:\TeamCity\buildAgent\work\DNN_Platform_910_Public\Packaging\DNN.Platform\DNN Platform\Library\Services\Installer\Writers\PackageWriterBase.cs:line 343
+2017-06-01 11:20:16,561 [LapDog][Thread:14][ERROR] DotNetNuke.Services.Exceptions.Exceptions - System.IO.IOException: The process cannot access the file 'C:\Dev\developer.me\Install\Module\Final Transcription_1.0.0_Install.zip' because it is being used by another process.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at DotNetNuke.Services.Installer.Writers.PackageWriterBase.CreateZipFile(String zipFileName) in C:\TeamCity\buildAgent\work\DNN_Platform_910_Public\Packaging\DNN.Platform\DNN Platform\Library\Services\Installer\Writers\PackageWriterBase.cs:line 332
+2017-06-01 11:20:16,854 [LapDog][Thread:15][ERROR] DotNetNuke.Services.Installer.Log.Logger - Error Saving File to Archive - System.Exception: Error on 'C:\Dev\developer.me\DesktopModules\Cityscripts\FinalTranscription\Final Transcription.dnn': See InnerException for details. ---> System.ComponentModel.Win32Exception: The process cannot access the file because it is being used by another process
+   --- End of inner exception stack trace ---
+   at SchwabenCode.QuickIO.Internal.InternalQuickIOCommon.NativeExceptionMapping(String path, Int32 errorCode)
+   at SchwabenCode.QuickIO.QuickIOFile.OpenFileStream(QuickIOPathInfo pathInfo, FileAccess fileAccess, FileMode fileOption, FileShare shareMode, Int32 buffer)
+   at DotNetNuke.Common.Utilities.FileSystemUtils.AddToZip(ZipOutputStream& ZipFile, String filePath, String fileName, String folder) in C:\TeamCity\buildAgent\work\DNN_Platform_910_Public\Packaging\DNN.Platform\DNN Platform\Library\Common\Utilities\FileSystemUtils.cs:line 465
+   at DotNetNuke.Services.Installer.Writers.PackageWriterBase.AddFilesToZip(ZipOutputStream stream, IDictionary`2 files, String basePath) in C:\TeamCity\buildAgent\work\DNN_Platform_910_Public\Packaging\DNN.Platform\DNN Platform\Library\Services\Installer\Writers\PackageWriterBase.cs:line 315
+   at DotNetNuke.Services.Installer.Writers.PackageWriterBase.CreateZipFile(String zipFileName) in C:\TeamCity\buildAgent\work\DNN_Platform_910_Public\Packaging\DNN.Platform\DNN Platform\Library\Services\Installer\Writers\PackageWriterBase.cs:line 343
+2017-06-01 11:20:16,854 [LapDog][Thread:14][ERROR] DotNetNuke.Services.Installer.Log.Logger - Error Saving File to Archive - System.IO.IOException: The process cannot access the file 'C:\Dev\developer.me\Install\Module\Final Transcription_1.0.0_Install.zip' because it is being used by another process.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at DotNetNuke.Services.Installer.Writers.PackageWriterBase.CreateZipFile(String zipFileName) in C:\TeamCity\buildAgent\work\DNN_Platform_910_Public\Packaging\DNN.Platform\DNN Platform\Library\Services\Installer\Writers\PackageWriterBase.cs:line 332
+2017-06-01 16:54:51,426 [LapDog][Thread:59][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.IO.DirectoryNotFoundException: Could not find a part of the path 'C:\Inetpub\vhosts\transcripts247.com\httpdocs\Portals\0\datafiles'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileSystemEnumerableIterator`1.CommonInit()
+   at System.IO.DirectoryInfo.InternalGetFiles(String searchPattern, SearchOption searchOption)
+   at Cityscripts.RushesStationTextUpdates.RushesStationTextUpdates.btReadDirectory_Click(Object sender, EventArgs e) in c:\Dev\developer.me\DesktopModules\Cityscripts\RushesStationTextUpdates\RushesStationTextUpdates.ascx.cs:line 70
+   at System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2017-06-01 16:54:51,611 [LapDog][Thread:59][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?tabid=40&error=Could+not+find+a+part+of+the+path+%27C%3a%5cInetpub%5cvhosts%5ctranscripts247.com%5chttpdocs%5cPortals%5c0%5cdatafiles%27.&content=0
+System.IO.DirectoryNotFoundException: Could not find a part of the path 'C:\Inetpub\vhosts\transcripts247.com\httpdocs\Portals\0\datafiles'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileSystemEnumerableIterator`1.CommonInit()
+   at System.IO.DirectoryInfo.InternalGetFiles(String searchPattern, SearchOption searchOption)
+   at Cityscripts.RushesStationTextUpdates.RushesStationTextUpdates.btReadDirectory_Click(Object sender, EventArgs e) in c:\Dev\developer.me\DesktopModules\Cityscripts\RushesStationTextUpdates\RushesStationTextUpdates.ascx.cs:line 70
+   at System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)

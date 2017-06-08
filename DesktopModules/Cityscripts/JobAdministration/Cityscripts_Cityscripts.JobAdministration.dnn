@@ -1,0 +1,63 @@
+﻿<dotnetnuke type="Package" version="5.0">
+  <packages><package name="Cityscripts.JobAdministration" type="Module" version="1.0.0">
+  <friendlyName>Job Administration</friendlyName>
+  <description>Cityscripts Job Administration module.</description>
+  <iconFile />
+  <owner>
+    <name>Cityscripts</name>
+    <organization>Cityscripts</organization>
+    <url />
+    <email />
+  </owner>
+  <license>The license for this package is not currently included within the installation file, please check with the vendor for full license details.</license>
+  <releaseNotes>This package has no Release Notes.</releaseNotes>
+  <components>
+    <component type="Module">
+      <desktopModule>
+        <moduleName>Cityscripts.JobAdministration</moduleName>
+        <foldername>Cityscripts/JobAdministration</foldername>
+        <businessControllerClass />
+        <supportedFeatures />
+        <moduleDefinitions>
+          <moduleDefinition>
+            <friendlyName>Cityscripts.JobAdministration</friendlyName>
+            <definitionName>Cityscripts.JobAdministration</definitionName>
+            <defaultCacheTime>0</defaultCacheTime>
+            <moduleControls>
+              <moduleControl>
+                <controlKey />
+                <controlSrc>DesktopModules/Cityscripts/JobAdministration/JobAdministration.ascx</controlSrc>
+                <supportsPartialRendering>False</supportsPartialRendering>
+                <controlTitle />
+                <controlType>View</controlType>
+                <iconFile />
+                <helpUrl />
+                <supportsPopUps>False</supportsPopUps>
+                <viewOrder>0</viewOrder>
+              </moduleControl>
+            </moduleControls>
+          </moduleDefinition>
+        </moduleDefinitions>
+      </desktopModule>
+    </component>
+    <component type="File">
+      <files>
+        <basePath>DesktopModules\Cityscripts\JobAdministration</basePath>
+        <file>
+          <path>App_LocalResources</path>
+          <name>JobAdministration.ascx.resx</name>
+        </file>
+        <file>
+          <name>JobAdministration.ascx</name>
+        </file>
+        <file>
+          <name>JobAdministration.ascx.cs</name>
+        </file>
+        <file>
+          <name>readme.txt</name>
+        </file>
+      </files>
+    </component>
+  </components>
+</package></packages>
+</dotnetnuke>
